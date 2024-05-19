@@ -108,6 +108,9 @@ config WANT_LDC1612
     bool
     depends on HAVE_GPIO_I2C
     default y
+config WANT_ADS1118
+    bool "Support ADS1118 ADC"
+    depends on HAVE_GPIO_SPI
 config WANT_SOFTWARE_I2C
     bool
     depends on HAVE_GPIO && HAVE_GPIO_I2C
@@ -137,6 +140,9 @@ config WANT_LIS2DW
 config WANT_LDC1612
     bool "Support ldc1612 eddy current sensor"
     depends on HAVE_GPIO_I2C
+config WANT_ADS1118
+    bool "Support ADS1118 ADC"
+    depends on HAVE_GPIO_SPI
 config WANT_SOFTWARE_I2C
     bool "Support software based I2C \"bit-banging\""
     depends on HAVE_GPIO && HAVE_GPIO_I2C
